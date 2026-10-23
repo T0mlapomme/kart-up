@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ec493c">
+
+  <title>Kart’Up — La ligue des pilotes</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a class="brand" href="./">
+      <span class="brandmark">⚑</span>
+      <span>
+        KART<br>
+        <b>’UP</b>
+      </span>
+    </a>
+
+    <nav aria-label="Navigation principale">
+      <button class="active" data-page="world">L’aventure</button>
+      <button data-page="online">Multijoueur</button>
+      <button data-page="garage">Le garage</button>
+      <button data-page="league">La ligue</button>
+      <button data-page="academy">L’académie</button>
+
+      <a href="https://commerce-kart-tom.dejonghe-tom45.chatgpt.site/plateau.html">
+        Version plateau ↗
+      </a>
+    </nav>
+
+    <button class="profilebutton" id="profileBtn"></button>
+  </header>
+
+  <main id="app"></main>
+
+  <footer>
+    <b>⚑ KART’UP</b>
+    <span>Apprendre. Piloter. Progresser.</span>
+    <small>
+      Prototype pédagogique · Solo &amp; multijoueur par code ·
+      Progression du pilote sur cet appareil
+    </small>
+  </footer>
+
+  <dialog id="dialog">
+    <div id="dialogBody"></div>
+  </dialog>
+
+  <section id="raceScreen" hidden>
+    <canvas
+      id="raceCanvas"
+      aria-label="Circuit pilotable avec les flèches gauche et droite ou les boutons tactiles"
+    ></canvas>
+
+    <div class="raceTop">
+      <button id="pauseBtn">Ⅱ Pause</button>
+
+      <div>
+        <span id="raceTitle"></span>
+
+        <div class="raceProgress">
+          <i id="raceProgressFill"></i>
+        </div>
+      </div>
+
+      <span id="racePlace">4e / 4</span>
+    </div>
+
+    <div class="raceStats">
+      <span id="raceCoins">◉ 0</span>
+      <span id="raceKnowledge">✦ 0 / 3</span>
+      <span id="raceTimer">0:00</span>
+    </div>
+
+    <div class="raceToast" id="raceToast">
+      Attrapez les cubes ✦ et les pièces !
+    </div>
+
+    <div class="raceBottom">
+      <button id="leftBtn" aria-label="Diriger à gauche">
+        ◀
+      </button>
+
+      <div>
+        <b id="raceSpeed">0 km/h</b>
+        <span>← → ou A / D pour piloter · Espace : pause</span>
+      </div>
+
+      <button id="rightBtn" aria-label="Diriger à droite">
+        ▶
+      </button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
